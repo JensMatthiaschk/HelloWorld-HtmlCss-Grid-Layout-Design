@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;900&family=Ubuntu:wght@400;700&display=swap');
+
+*{                                  /*Universal Target*/
+    padding: 0;                     /*Reset the outer padding*/
+    margin: 0;                      /*Reset the inner padding*/
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;               /*Hide the over-lapping of elements if any has been caused*/
+}
+
+body{                               /*Selector*/
+                                    /* Properties field: changes background color of the body (view port), 'property' followed by 'value'*/
+}
+
+.container{
+    height: 100vh;                  /*Unit "vh" is calculating best value for viewport height*/
+    background: linear-gradient(to bottom, cornflowerblue, coral);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);  /*First the amount of columns, then Unit which identifies the size of each*/
+    grid-template-rows: repeat(12, 1fr);
+}
+
+.elHeader {
+    grid-column: 1 / span 12;        /*Spanning in this case means 12 times repeating, Header takes up entire row*/
+    grid-row: 1 / span 1;            /*Makes sure that Header never leaves row 1*/
+}
+
+.elNavBar {
+    grid-column: 1 / span 12;
+    grid-row: 2 / span 1;
+}
+
+.elFooter {
+    grid-column: 1 / span 12;
+    grid-row: 12 / span 1;
+}
+
+.elAdvert {
+    grid-column: 12 / span 1;
+    grid-row: 3 / span 9;
+}
+
+.elSideNavBar {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 9;
+}
+
+.elMainPageBody {
+    grid-column: 2 / span 10;
+    grid-row: 3 / span 9;
+}
+
+.navContainer {
+    box-shadow: 0px 5px 40px #9b9b92;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+}
+
+.navContainer .nav {
+    display: flex;
+    justify-content: space-around;      /*aligns content horizontally*/
+    align-items: center;                /*Align items along y-axis*/
+}
+
+.nav .ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
