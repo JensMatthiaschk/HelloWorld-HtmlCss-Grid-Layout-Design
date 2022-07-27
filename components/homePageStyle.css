@@ -5,8 +5,8 @@
 
 .full-ContFl {
     height: 100vh;
-    background: radial-gradient(ellipse at top, var(--c1), var(--c2), transparent),
-    radial-gradient(ellipse at top, var(--c3), var(--c4), transparent);
+    background: radial-gradient(ellipse at top, var(--c1), var(--c2), var(--c5), transparent),
+    radial-gradient(ellipse at top, var(--c3), var(--c4), var(--c6), transparent);
     background-size: 400% 400%;
     -webkit-animation: liquidBG 14s ease-in-out infinite; /*color change, animation lasts 12s and repeats*/
 }
@@ -24,18 +24,32 @@
 }
 
 :root {
-    --c1: #EED180;
-    --c2: #D75281;
-    --c3: #FF8FB1;
-    --c4: #7A4495; /*f.e. using "var(--c1)" will access the variables*/
-    --c5: #efe9e9;
-    --c6: #7fd1df;
+    --c1: rgba(238, 209, 128, 0.6);
+    --c2: rgba(215, 82, 129, 0.6);
+    --c3: rgba(255, 143, 177, 0.6);
+    --c4: rgba(122, 68, 149, 0.6); /*f.e. using "var(--c1)" will access the variables*/
+    --c5: rgba(239, 233, 233, 0.4);
+    --c6: rgba(127, 209, 223, 0.6);
+}
+
+.waitingListNav {
+    width: 85vw;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 85vw;
+    border-width: 4px;
+    border-radius: 8px;
+    margin: auto;
+    color: #D75281FF;
 }
 
 .navContainer, .footer {
-    background: radial-gradient(ellipse at right, var(--c1), var(--c2), var(--c5), transparent),
+/*    background: radial-gradient(ellipse at right, var(--c1), var(--c2), var(--c5), transparent),
     radial-gradient(ellipse at top, var(--c3), var(--c4), var(--c6), transparent);
-    background-size: 200% 200%;
+    background-size: 250% 250%;*/
+    background: rgba(117, 117, 117, 0.5);
 }
 
 .container {
@@ -56,24 +70,11 @@
     padding: 2vh;
 }
 
-
-.divider {
-    width: 70vw;
-    border-width: 4px;
-    border-radius: 8px;
-    margin: auto;
-    color: #D75281FF;
-}
-
 .navbar-2 {
     display: flex;
     flex-direction: row;
     padding: 0 15% 0 15%;
     justify-content: center;
-}
-
-.li {
-    padding-right: 10vw;
 }
 
 .roundedImage {
@@ -92,9 +93,17 @@
 }
 
 .addV, .subV {
-    background-color: rgba(122, 68, 149, 0.5);
+    background-color: rgba(127, 209, 223, 0.6);
     color: rgba(0, 0, 0, 0.60);
     border-color: rgba(0, 0, 0, 0.60);
+    margin-left: 2vw;
+}
+
+.creatWL {
+    background-color: rgba(0, 0, 0, 0.60);
+    border-color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
 }
 
 .footer {
@@ -111,8 +120,7 @@
     align-content: center;
 }
 
-/*
-.votingSystemSection, .mainSection {
+/*.votingSystemSection, .mainSection {
     background-color: rgba(240, 248, 255, 0.22);
     backdrop-filter: blur(500px);
 }*/

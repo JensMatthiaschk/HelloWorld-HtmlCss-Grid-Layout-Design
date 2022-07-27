@@ -7,6 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="homePageStyle.css">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
     <!--Party JS-->
     <script src="https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js"></script>
 </head>
@@ -22,46 +24,68 @@
         </section>
     </div>
     <section class="waitingListNav">
-        <ul class="navbar-2">
-            <li class="li">Dashboard</li>
-            <li class="li">Settings</li>
-            <li class="li">More Options<a href=""></a></li>
-            <button type="button" class="btn btn-secondary">Create Waiting List</button>
-        </ul>
-    </section>
-    <hr class="divider">
-    <section class="mainSection">
-        <div class="container">
-            <div class="containerImage">
-                <img class="roundedImage" src="https://picsum.photos/200/300">
+        <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#mnav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="mnav">
+                    <ul class="navbar-nav me-auto mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Settings</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">More Options</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Option 1</a>
+                                <a href="#" class="dropdown-item">Option 2</a>
+                                <a href="#" class="dropdown-item">Option 3</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button type="button" class="btn btn-secondary creatWL">Create Waiting List</button>
+                </div>
             </div>
-            <h1 class="display-4 text-WL">This is where you’ll manage your Waiting List</h1>
-            <p class="lead text-muted">Create your first Waiting List</p>
-            <button type="button" class="btn btn-secondary">Create Waiting List</button>
+        </nav>
+        <hr class="divider">
+    </section>
+<section class="mainSection">
+    <div class="container">
+        <div class="containerImage">
+            <img class="roundedImage" src="https://picsum.photos/200/300">
         </div>
-    </section>
+        <h1 class="display-4 text-WL">This is where you’ll manage your Waiting List</h1>
+        <p class="lead text-muted">Create your first Waiting List</p>
+        <button type="button" class="btn btn-secondary creatWL">Create Waiting List</button>
+    </div>
+</section>
 
-    <hr class="divider">
+<hr class="divider">
 
-    <section class="votingSystemSection">
-        <p class="valueDisplay text-muted display-6">.Value.</p>
-        <!--valueDisplay will be our own target class for JS-->
-        <button onclick="party.confetti(this)" class="addV btn btn-outline-dark">Add Value</button>
-        <button onclick="party.sparkles(this)" class="subV btn btn-outline-dark">Substract Value</button>
-    </section>
+<section class="votingSystemSection">
+    <p class="valueDisplay text-muted display-6">.Value.</p>
+    <!--valueDisplay will be our own target class for JS-->
+    <button onclick="party.confetti(this)" class="addV btn btn-outline-dark">Add Value</button>
+    <button onclick="party.sparkles(this)" class="subV btn btn-outline-dark">Subtract Value</button>
+</section>
 
-    <section class="footerSection">
-        <footer class="footer">
-            <div class="contactDev">
-                <input type="text" class="form-control form-control-sm"/>
-                <button onclick="sendMail()" type="button" class="btn btn-dark btn-sm">Shoot a Message to the Dev</button>
-            </div>
-            <p class="display-6">Copyright @ Jens 2022</p>
-        </footer>
-    </section>
+<section class="footerSection">
+    <footer class="footer">
+        <div class="contactDev">
+            <input type="text" class="form-control form-control-sm">
+            <button onclick="sendMail()" type="button" class="btn btn-dark btn-sm">Shoot a Message to the Dev
+            </button>
+        </div>
+        <p class="display-6">Copyright @ Jens 2022</p>
+    </footer>
+</section>
 
 </div>
-<!--Bridge betwwen Html and JS-->
+<!--Bridge between Html and JS-->
 <script src="/backend/scripts.js"></script>
 </body>
 </html>
