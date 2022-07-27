@@ -11,7 +11,7 @@ body{                               /*Selector*/
                                     /* Properties field: changes background color of the body (view port), 'property' followed by 'value'*/
 }
 
-.container{
+.container-fluid{
     height: 100vh;                  /*Unit "vh" is calculating best value for viewport height*/
     background: linear-gradient(to bottom, cornflowerblue, coral);
     display: grid;
@@ -70,4 +70,8 @@ body{                               /*Selector*/
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.heroSection {
+    text-align: center;
 }
