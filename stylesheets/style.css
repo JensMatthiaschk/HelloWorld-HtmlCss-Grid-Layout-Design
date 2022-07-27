@@ -75,3 +75,7 @@ body{                               /*Selector*/
 .heroSection {
     text-align: center;
 }
+
+.ul .li {
+    padding-right: 2vw;
+}
