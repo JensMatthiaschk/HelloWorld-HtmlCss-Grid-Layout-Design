@@ -4,10 +4,12 @@
 }
 
 .full-ContFl {
+/*    display: flex;
+    flex-direction: column;*/
     height: 100vh;
     background: radial-gradient(ellipse at top, var(--c1), var(--c2), var(--c5), transparent),
     radial-gradient(ellipse at top, var(--c3), var(--c4), var(--c6), transparent);
-    background-size: 400% 400%;
+    background-size: 500% 500%;
     -webkit-animation: liquidBG 14s ease-in-out infinite; /*color change, animation lasts 12s and repeats*/
 }
 
@@ -42,7 +44,7 @@
     border-width: 4px;
     border-radius: 8px;
     margin: auto;
-    color: #D75281FF;
+    color: rgba(127, 209, 223, 0.8);
 }
 
 .navContainer, .footer {
@@ -50,6 +52,10 @@
     radial-gradient(ellipse at top, var(--c3), var(--c4), var(--c6), transparent);
     background-size: 250% 250%;*/
     background: rgba(117, 117, 117, 0.5);
+}
+
+.navbar-brand {
+    padding: 0;
 }
 
 .container {
@@ -62,7 +68,7 @@
     /*border-style: solid;*/
     /*border-width: 0 3px 5px 3px;*/
     /*background: rgba(215, 82, 129, 0.4);*/
-    background: linear-gradient(to top, rgba(215, 82, 129, 0.4) 30%, rgba(215, 82, 129, 0))
+    background: linear-gradient(to top, rgba(127, 209, 223, 0.3) 30%, rgba(215, 82, 129, 0))
 }
 
 .text-WL {
@@ -78,13 +84,13 @@
 }
 
 .roundedImage {
-    border-radius: 25px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.62);
+    border-radius: 1.8rem;
+    box-shadow: 0 1.3rem 3rem rgba(0, 0, 0, 0.62);
     transition: text-shadow 5s;
 }
 
 .lead {
-    text-shadow: 0 5px 20px rgb(245, 238, 238, 0.91);
+    text-shadow: 0 0.3rem 1.2rem rgb(245, 238, 238, 0.91);
     transition: box-shadow 5s;
 }
 
@@ -99,7 +105,7 @@
     margin-left: 2vw;
 }
 
-.creatWL {
+.btn-creatWL, .message-btn {
     background-color: rgba(0, 0, 0, 0.60);
     border-color: rgba(255, 255, 255, 0.6);
     color: rgba(255, 255, 255, 0.6);
@@ -107,6 +113,7 @@
 }
 
 .footer {
+    /*footer overlaps with content in mobile size..fix needed*/
     position: fixed;
     bottom: 0;
     left: 0;
@@ -117,7 +124,22 @@
 .footer, .contactDev {
     display: flex;
     justify-content: space-evenly;
-    align-content: center;
+    align-items: center;
+}
+
+.message-btn {
+    width: 22rem;
+    /*height: 2.1rem;*/
+    margin: 0 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.copyright {
+    font-size: 1.5rem;
+    margin: 0.5rem;
 }
 
 /*.votingSystemSection, .mainSection {
